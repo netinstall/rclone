@@ -1,0 +1,6 @@
+SHELL=/bin/bash
+PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
+
+# Baikal
+#0 2 * * * max sleep $((RANDOM \% 3600)) && rclone copy /opt/baikal/data/ yandex:/Backup/baikal
+
