@@ -1,4 +1,10 @@
 Получить конфиг для авторизации:
 - на машине с браузером выполнить:
     `rclone authorize "yandex"`
-- скопировать данные в `~/.config/rclone/rclone.conf` 
+- скопировать данные в `~/.config/rclone/rclone.conf`
+    - токен от yandex в конфиге живет год. Обновить можно так:
+        -  `rclone config reconnect yandex:`
+        -  на локальной машине запустить тунель:
+        -  `ssh -L 53682:localhost:53682 home`
+        -  на локальной машине перейти по  http://127.0.0.1:53682/auth?state=xKLTfcnsKH8-vZlBNO9W4A
+        -  токен на серевере обновлен
